@@ -1,3 +1,8 @@
+'''
+归并排序
+一个分解，重构的过程
+'''
+
 class MergeSort():
     def __call__(self, *args):
         return self.mergesort(*args)
