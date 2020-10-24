@@ -15,9 +15,12 @@ while True:
 
 
 class MyListIterator():
-    def __init__(self, my_list, index=0):
+    '''
+    迭代器中要实现__next__
+    '''
+    def __init__(self, my_list, start_index=0):
         self.my_list = my_list
-        self.index = index
+        self.index = start_index
     def __next__(self):
         if self.index < len(self.my_list.data):
             val = self.my_list.data[self.index]
@@ -28,6 +31,9 @@ class MyListIterator():
 
 
 class MyList(): # 自己定义了一个可迭代list类，里面必须有一个iterator方法
+    '''
+    可迭代对象中要实现__iter__,就是一个迭代器
+    '''
     def __init__(self, data):
         self.data = list(data)
 

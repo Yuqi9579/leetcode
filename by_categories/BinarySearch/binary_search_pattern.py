@@ -4,6 +4,8 @@ Exp1：Return the index of an element in a SORTED array.
 
 [l, r) 采用左闭右开，始终把subpart分为左中右三部分。
 m = l + (r-l) // 2 = floor((l+r)/2)
+在二分查找中，结束时left一定是等于right的
+
 '''
 
 def binary_search_exp1(nums, val):

@@ -9,9 +9,9 @@ from typing import List
 
 def upper_bound(A: List, val: int) -> int:
     '''
-    return: First index of i, such that A[i] > val
+    return: First INDEX of i, such that A[i] > val
     A = [1,2,2,2,4,4,5]
-    upper_bound(A, 2) = 4
+    upper_bound(A, 2) = 4   A[4]=4
     '''
     l = 0
     r = len(A)
@@ -26,7 +26,9 @@ def upper_bound(A: List, val: int) -> int:
 
 def lower_bound(A: List, val: int) -> int:
     '''
-    return: First index of i, such that A[i] >= val
+    return: First INDEX of i, such that A[i] >= val
+    A = [1,2,2,2,4,4,5]
+    lower_bound(A, 2) = 1   A[1]=2 
     '''
     l = 0
     r = len(A)
@@ -38,5 +40,9 @@ def lower_bound(A: List, val: int) -> int:
             l = m + 1
     return l
 
-print(lower_bound([1,2,2,2,3,3,4,5,6,6,7,7,7,9], 3.5))
-print(upper_bound([1,2,2,2,3,3,4,5,6,6,7,7,7,9], 3.5))
+
+    
+if __name__ == '__main__':
+
+    print(lower_bound([1,2,2,2,3,3,4,5,6,6,7,7,7,9], 3.5))
+    print(upper_bound([1,2,2,2,3,3,4,5,6,6,7,7,7,9], 3.5))
